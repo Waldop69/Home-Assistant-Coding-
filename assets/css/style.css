@@ -1,0 +1,373 @@
+/* ===========================================================
+   Knights of Columbus Council 1016 — Site Stylesheet
+   Colors: Navy (primary) + Gold (accent), per KofC branding
+   =========================================================== */
+
+:root {
+  --navy: #0b2545;
+  --navy-dark: #071a33;
+  --gold: #c9a227;
+  --gold-light: #e8d089;
+  --off-white: #f7f5f0;
+  --text: #232323;
+  --muted: #5a5a5a;
+  --border: #ddd6c5;
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text);
+  background: var(--off-white);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+  color: var(--navy);
+  line-height: 1.25;
+}
+
+a { color: var(--navy); }
+a:hover { color: var(--gold); }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---------- Header / Nav ---------- */
+
+.site-header {
+  background: var(--navy);
+  border-bottom: 4px solid var(--gold);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.25rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.brand-emblem {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brand-text .brand-name {
+  display: block;
+  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.brand-text .brand-sub {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--gold-light);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 2px solid var(--gold);
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-size: 0.92rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 4px;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  background: var(--gold);
+  color: var(--navy-dark);
+}
+
+@media (max-width: 860px) {
+  .nav-toggle { display: inline-block; }
+  .site-nav {
+    display: none;
+    width: 100%;
+    background: var(--navy-dark);
+  }
+  .site-nav.open { display: block; }
+  .site-nav ul { flex-direction: column; padding: 0.5rem 1.25rem 1rem; }
+  .header-inner { flex-wrap: wrap; }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+  color: #fff;
+  padding: 3.5rem 1.25rem;
+  text-align: center;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem;
+}
+
+.hero p {
+  color: var(--gold-light);
+  font-size: 1.1rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hero .cta-row {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-block;
+  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.65rem 1.3rem;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy-dark);
+}
+.btn-gold:hover { background: var(--gold-light); color: var(--navy-dark); }
+
+.btn-outline {
+  border-color: var(--gold-light);
+  color: #fff;
+}
+.btn-outline:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+/* ---------- Page header (non-home pages) ---------- */
+
+.page-banner {
+  background: var(--navy);
+  color: #fff;
+  padding: 2.25rem 1.25rem;
+  text-align: center;
+  border-bottom: 4px solid var(--gold);
+}
+
+.page-banner h1 { color: #fff; margin: 0; }
+.page-banner p { color: var(--gold-light); margin: 0.4rem 0 0; }
+
+/* ---------- Main content ---------- */
+
+main {
+  padding: 2.5rem 0 3rem;
+}
+
+section + section { margin-top: 2.5rem; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--gold);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.card h3 { margin-top: 0; }
+
+.card a.card-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.callout {
+  background: #fff;
+  border-left: 4px solid var(--gold);
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+}
+
+.placeholder {
+  background: #fffbe8;
+  border: 1px dashed var(--gold);
+  color: #7a6212;
+  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 4px;
+  margin: 0.75rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: #fff;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: var(--navy);
+  color: #fff;
+  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.link-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.link-list a { font-weight: bold; text-decoration: none; }
+.link-list .desc { display: block; color: var(--muted); font-size: 0.92rem; }
+
+.calendar-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 60%;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.calendar-embed iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+
+/* ---------- Officer / contact cards ---------- */
+
+.person-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.person-card .avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--navy-dark);
+  color: #cdd6e5;
+  padding: 2rem 1.25rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer-grid h4 {
+  color: var(--gold-light);
+  margin-top: 0;
+  font-size: 0.95rem;
+}
+
+.site-footer a { color: #cdd6e5; }
+.site-footer a:hover { color: var(--gold-light); }
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  color: #8a97ad;
+  font-size: 0.8rem;
+}

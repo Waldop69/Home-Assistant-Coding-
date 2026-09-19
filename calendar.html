@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendar of Events | Knights of Columbus Council 1016</title>
+<meta name="description" content="Upcoming meetings, fundraisers, and parish events for Knights of Columbus Council 1016.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-emblem">KofC</span>
+      <span class="brand-text">
+        <span class="brand-name">Knights of Columbus</span>
+        <span class="brand-sub">Council 1016</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776; Menu</button>
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="calendar.html" aria-current="page">Calendar</a></li>
+        <li><a href="join.html">Join Us</a></li>
+        <li><a href="fourth-degree.html">Fourth Degree</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="links.html">Links</a></li>
+        <li><a href="insurance.html">Insurance Agent</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-banner">
+  <h1>Calendar of Events</h1>
+  <p>Council meetings, fundraisers, and parish events</p>
+</div>
+
+<main>
+  <div class="container">
+
+    <section>
+      <h2>Council Calendar</h2>
+      <p class="placeholder">
+        Placeholder: The easiest way to keep this calendar current is to embed a public
+        Google Calendar. Create a calendar in Google Calendar, set it to public, then replace
+        the <code>src</code> URL in the iframe below with your calendar's embed link
+        (Settings &rarr; "Integrate calendar" &rarr; "Embed code").
+      </p>
+      <div class="calendar-embed">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=REPLACE_WITH_YOUR_CALENDAR_ID&ctz=America%2FNew_York"
+          title="Council 1016 Events Calendar"
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <section>
+      <h2>Upcoming Events (List View)</h2>
+      <p>For members without easy access to the embedded calendar above.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Event</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>[Date]</td>
+            <td>Council Business Meeting</td>
+            <td>[Parish Hall Name]</td>
+          </tr>
+          <tr>
+            <td>[Date]</td>
+            <td>Fish Fry Fundraiser</td>
+            <td>[Location]</td>
+          </tr>
+          <tr>
+            <td>[Date]</td>
+            <td>Rosary &amp; Social</td>
+            <td>[Location]</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="placeholder">
+        Placeholder: Update this table each month, or remove it entirely if the embedded
+        calendar above covers everything you need.
+      </p>
+    </section>
+
+    <section class="callout">
+      <h2>Recurring Meetings</h2>
+      <p class="placeholder">
+        Placeholder: [Council meetings are held on the first and third Tuesday of each month
+        at 7:00 PM.] Update with your council's actual recurring schedule.
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Knights of Columbus Council 1016</h4>
+      <p>[Street Address]<br>[City, State ZIP]</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul style="list-style:none; padding:0; margin:0;">
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="join.html">Join Us</a></li>
+        <li><a href="links.html">Parish &amp; Catholic Links</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Email: <a href="mailto:info@council1016.example">info@council1016.example</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; <span id="year"></span> Knights of Columbus Council 1016. All rights reserved.
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
