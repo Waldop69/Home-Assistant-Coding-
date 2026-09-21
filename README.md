@@ -14,6 +14,7 @@ step or server required.
 - `history.html` — History of the Knights of Columbus and Council 1016
 - `links.html` — Parish, diocese, and other Catholic organization links
 - `insurance.html` — Council insurance agent / Field Agent contact
+- `dues.html` — Pay annual membership dues online (PayPal button)
 
 Shared styles live in `assets/css/style.css`, shared nav-toggle script in
 `assets/js/main.js`. Newsletter PDFs go in `assets/newsletters/`.
@@ -34,6 +35,8 @@ marking content you need to personalize:
 - Google Calendar embed URL (`calendar.html`) — create a public Google
   Calendar, then Settings → "Integrate calendar" → copy the embed `src`
 - Monthly newsletter PDFs in `assets/newsletters/` (see that folder's README)
+- PayPal business email, dues amount, and return URLs in `dues.html` (see
+  the "Setting This Up" section on that page for step-by-step instructions)
 
 ## Deploying to GoDaddy
 

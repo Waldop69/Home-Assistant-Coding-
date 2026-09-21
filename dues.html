@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pay Dues | Knights of Columbus Council 1016</title>
+<meta name="description" content="Pay your annual Knights of Columbus Council 1016 membership dues securely online.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-emblem">KofC</span>
+      <span class="brand-text">
+        <span class="brand-name">Knights of Columbus</span>
+        <span class="brand-sub">Council 1016</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776; Menu</button>
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="join.html">Join Us</a></li>
+        <li><a href="dues.html" aria-current="page">Pay Dues</a></li>
+        <li><a href="fourth-degree.html">Fourth Degree</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="links.html">Links</a></li>
+        <li><a href="insurance.html">Insurance Agent</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-banner">
+  <h1>Pay Your Membership Dues</h1>
+  <p>Secure online payment for Council 1016 annual dues</p>
+</div>
+
+<main>
+  <div class="container">
+
+    <section>
+      <h2>Annual Dues</h2>
+      <p>
+        Council 1016 annual membership dues are
+        <strong>$<span id="dues-amount">30.00</span></strong> per year.
+        You can pay securely online below using a debit/credit card or your
+        PayPal balance &mdash; you do not need a PayPal account to pay by card.
+      </p>
+      <div class="placeholder">
+        Placeholder: Update the dues amount above (and in the button code below)
+        to match your council's actual annual dues.
+      </div>
+    </section>
+
+    <section>
+      <div class="card" style="max-width:420px;">
+        <h3>Pay 2026 Membership Dues</h3>
+        <p>Council 1016 &mdash; Annual Dues</p>
+
+        <!--
+          PayPal "Buy Now" button.
+          Before publishing, replace YOUR-PAYPAL-EMAIL@example.com with the
+          council's actual PayPal email (Financial Secretary or Treasurer's
+          PayPal Business/Personal account), and set the amount value to
+          match your real dues.
+
+          To customize further (add a "membership year" note field, change
+          the button image, etc.), log into paypal.com -> Pay & Get Paid ->
+          create a button there instead, and paste the code PayPal gives you
+          in place of this form.
+        -->
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="YOUR-PAYPAL-EMAIL@example.com">
+          <input type="hidden" name="item_name" value="Knights of Columbus Council 1016 - Annual Membership Dues">
+          <input type="hidden" name="amount" value="30.00">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="hidden" name="no_shipping" value="1">
+          <input type="hidden" name="return" value="https://YOUR-DOMAIN.example/dues-thankyou.html">
+          <input type="hidden" name="cancel_return" value="https://YOUR-DOMAIN.example/dues.html">
+          <button type="submit" class="btn btn-gold" style="border:none; cursor:pointer; font-size:1rem;">
+            Pay Dues with PayPal &rarr;
+          </button>
+        </form>
+      </div>
+
+      <div class="placeholder" style="max-width:420px;">
+        Placeholder: Replace <code>YOUR-PAYPAL-EMAIL@example.com</code> and the
+        <code>return</code>/<code>cancel_return</code> URLs above with real
+        values before publishing. See setup steps below.
+      </div>
+    </section>
+
+    <section>
+      <h2>Setting This Up (One-Time)</h2>
+      <ol>
+        <li>
+          The council needs a <a href="https://www.paypal.com/us/webapps/mpp/account-selection" target="_blank" rel="noopener">PayPal account</a>
+          (Business account recommended so it's tied to the council, not a
+          personal member) &mdash; free to create, only a per-transaction fee
+          when money is received.
+        </li>
+        <li>
+          Get the email address associated with that PayPal account and paste
+          it into the <code>business</code> field in the button code above.
+        </li>
+        <li>
+          Set the <code>amount</code> field to match current annual dues.
+        </li>
+        <li>
+          Optional but recommended: once the site is live on your real domain,
+          update <code>return</code>/<code>cancel_return</code> to point at a
+          simple "Thank you" page and back to this page, so members land
+          somewhere sensible after paying.
+        </li>
+        <li>
+          Test it yourself with a small real payment (or PayPal's sandbox/test
+          mode) before announcing it to members.
+        </li>
+      </ol>
+      <p class="placeholder">
+        Prefer Stripe or Square instead of PayPal? Both offer free hosted
+        "Payment Links" you create in their dashboard (no coding) &mdash; just
+        replace the PayPal form above with a plain link
+        (<code>&lt;a class="btn btn-gold" href="YOUR_STRIPE_OR_SQUARE_LINK"&gt;Pay Dues &rarr;&lt;/a&gt;</code>)
+        pointing at that payment link. Let your webmaster know which
+        processor you'd like and this can be swapped in.
+      </p>
+    </section>
+
+    <section class="callout">
+      <h2>Questions About Dues?</h2>
+      <p>
+        Contact our Financial Secretary at
+        <a href="mailto:info@council1016.example">info@council1016.example</a>
+        if you have questions about your dues status, need a payment plan, or
+        would prefer to pay by check or in person at a council meeting.
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Knights of Columbus Council 1016</h4>
+      <p>[Street Address]<br>[City, State ZIP]</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul style="list-style:none; padding:0; margin:0;">
+        <li><a href="join.html">Join Us</a></li>
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Email: <a href="mailto:info@council1016.example">info@council1016.example</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; <span id="year"></span> Knights of Columbus Council 1016. All rights reserved.
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
